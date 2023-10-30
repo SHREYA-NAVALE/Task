@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="details">
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly<br>
+            updates on:
+            </p>
+            <ul>
+                <li><img src="icon-list (1).svg">Product discovery and building what matters</li>
+                <li><img src="icon-list (1).svg">Measuring to ensure updates are success</li>
+                <li><img src="icon-list (1).svg">And much more!</li>
+            </ul>
+            
+            <label for="email">Email address<br>
+                <span id="msg"></span>
+                <form name="Form"><input type="text" placeholder="      email@company.com" name="Email" value="">
+                </form>
+            </label>
+            <br>
+            <button onclick="func()">Subscribe to monthly newsletter</button>
+        </div>
+        <div id="image">
+            <img src="illustration-sign-up-desktop.svg" width="400" height="593">
+        </div>
+    </div>
+
+    <script>
+        
+        function func(){
+            let e = document.Form.Email.value
+            for (let i = 0; i < e.length; i++){
+                if(e.includes("@") && e.includes(".")){
+                    window.open("submit.html","_blank")
+                }
+                else{
+                    let msg = document.getElementById("msg")
+                    msg.innerHTML="Valid email required"
+        
+                }
+                
+            }
+            
+            //     
+
+            
+            return false
+
+        }
+        
+    </script>
+</body>
+</html>
